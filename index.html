@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UnitFlow - Smart Unit Converter</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-shape shape-one"></div>
+    <div class="background-shape shape-two"></div>
+
+    <main class="app">
+
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon">⇄</div>
+                <div>
+                    <h1>UnitFlow</h1>
+                    <p>Smart Unit Converter</p>
+                </div>
+            </div>
+
+            <div class="status">
+                <span></span> Live Conversion
+            </div>
+        </header>
+
+        <!-- Main Card -->
+        <section class="converter-card">
+
+            <div class="intro">
+                <span class="badge">⚡ FAST & SIMPLE</span>
+                <h2>Convert Anything,<br><span>Instantly.</span></h2>
+                <p>Choose your units and start typing. Your result updates automatically.</p>
+            </div>
+
+            <!-- Category -->
+            <div class="category-wrapper">
+                <button class="category active" data-category="length">
+                    📏 Length
+                </button>
+
+                <button class="category" data-category="weight">
+                    ⚖️ Weight
+                </button>
+            </div>
+
+            <!-- Converter -->
+            <div class="converter-area">
+
+                <!-- From -->
+                <div class="unit-box">
+                    <label>FROM</label>
+
+                    <div class="input-wrapper">
+                        <input type="number" id="inputValue" placeholder="Enter value" step="any">
+                    </div>
+
+                    <select id="fromUnit"></select>
+                </div>
+
+                <!-- Swap -->
+                <button class="swap-btn" id="swapBtn" title="Swap units">
+                    ⇄
+                </button>
+
+                <!-- To -->
+                <div class="unit-box">
+                    <label>TO</label>
+
+                    <div class="result-wrapper">
+                        <input type="text" id="resultValue" placeholder="Result" readonly>
+
+                        <button id="copyBtn" title="Copy result">⧉</button>
+                    </div>
+
+                    <select id="toUnit"></select>
+                </div>
+
+            </div>
+
+            <!-- Result -->
+            <div class="result-card">
+                <div class="result-icon">✓</div>
+
+                <div>
+                    <small>CONVERSION RESULT</small>
+                    <h3 id="resultText">Enter a value to begin</h3>
+                </div>
+            </div>
+
+            <!-- Quick Conversion -->
+            <div class="quick-section">
+                <div class="section-title">
+                    <span>Quick Conversions</span>
+                    <small>Popular units</small>
+                </div>
+
+                <div class="quick-grid" id="quickGrid"></div>
+            </div>
+
+        </section>
+
+        <footer>
+            Built with HTML5 • CSS3 • JavaScript
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
